@@ -1,0 +1,33 @@
+---
+import MapContainer from '../components/MapContainer';
+import { Toaster } from 'sonner';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Measure Your Pool | Pool Measurement Tool</title>
+  </head>
+  <body class="m-0 p-0 overflow-hidden">
+    <MapContainer client:only="react" />
+    <Toaster client:only="react" position="top-center" richColors />
+  </body>
+</html>
+
+<style is:global>
+  @import "../styles/global.css";
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+</style>

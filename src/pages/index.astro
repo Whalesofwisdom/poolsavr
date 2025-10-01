@@ -1,16 +1,35 @@
 ---
-
+import Layout from '../layouts/Layout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Measure Your Pool Online | Pool Measurement Tool">
+  <main>
+    <header class="sticky top-0 z-50 bg-white border-b">
+      <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <div class="font-bold text-xl">PoolMeasure</div>
+        <a href="/measure" class="bg-primary text-primary-foreground px-6 py-2 rounded-md font-semibold hover:bg-primary/90">
+          Measure My Pool
+        </a>
+      </div>
+    </header>
+
+    <section class="container mx-auto px-4 py-20 text-center">
+      <h1 class="text-4xl md:text-6xl font-bold mb-6">
+        Measure your pool in 60 seconds — right on the map
+      </h1>
+      <p class="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+        Draw the outline on up-to-date aerial imagery. We calculate perimeter and surface area and send a proposal.
+      </p>
+      <div class="flex gap-4 justify-center">
+        <a href="/measure" class="bg-primary text-primary-foreground px-8 py-3 rounded-md font-semibold text-lg hover:bg-primary/90">
+          Measure My Pool
+        </a>
+        <button class="border border-border px-8 py-3 rounded-md font-semibold text-lg hover:bg-accent">
+          See Sample Report
+        </button>
+      </div>
+    </section>
+
+    <!-- Add more sections here as you build them -->
+  </main>
+</Layout>
