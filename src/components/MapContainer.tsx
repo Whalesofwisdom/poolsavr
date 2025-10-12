@@ -56,6 +56,18 @@ const formSchema = z.object({
     .trim()
     .email({ message: "Invalid email address" })
     .max(255, { message: "Email must be less than 255 characters" }),
+  deepEnd: z.string()
+    .trim()
+    .min(1, { message: "Deep end depth is required" })
+    .refine((val) => !isNaN(Number(val)) && Number(val) > 0, {
+      message: "Must be a valid positive number",
+    }),
+  shallowEnd: z.string()
+    .trim()
+    .min(1, { message: "Shallow end depth is required" })
+    .refine((val) => !isNaN(Number(val)) && Number(val) > 0, {
+      message: "Must be a valid positive number",
+    }),
   address: z.string()
     .trim()
     .min(1, { message: "Property address is required" })
@@ -88,6 +100,8 @@ const MapContainer = () => {
     defaultValues: {
       name: "",
       email: "",
+      deepEnd: "",
+      shallowEnd: "3.5",
       address: "",
       notes: "",
     },
@@ -539,6 +553,36 @@ const MapContainer = () => {
                       </FormItem>
                     )}
                   />
+
+                  <div>
+                    <FormLabel className="block mb-2">Pool Depth (ft) *</FormLabel>
+                    <div className="grid grid-cols-2 gap-3">
+                      <FormField
+                        name="deepEnd"
+                        render={({ field }: { field: any }) => (
+                          <FormItem>
+                            <FormLabel className="text-xs text-muted-foreground">Deep End</FormLabel>
+                            <FormControl>
+                              <Input placeholder="6.5" {...field} />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                      <FormField
+                        name="shallowEnd"
+                        render={({ field }: { field: any }) => (
+                          <FormItem>
+                            <FormLabel className="text-xs text-muted-foreground">Shallow End</FormLabel>
+                            <FormControl>
+                              <Input placeholder="3.5" {...field} />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                    </div>
+                  </div>
 
                   <FormField
                     name="address"
