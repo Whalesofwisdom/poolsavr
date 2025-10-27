@@ -1,0 +1,667 @@
+{
+    "categories": [
+      {
+        "id": "pool_finishes",
+        "name": "Pool Finishes",
+        "page": 1,
+        "items": [
+          {
+            "id": "pool_plaster_standard",
+            "name": "Pool Plaster - Standard White",
+            "description": "Price includes demo",
+            "pricing_type": "per_unit",
+            "rate": 7.25,
+            "unit": "sq_ft",
+            "requires_measurement": true,
+            "measurement_label": "Square Footage"
+          },
+          {
+            "id": "pool_stonescapes",
+            "name": "Pool Stonescapes",
+            "description": "Price includes demo",
+            "pricing_type": "per_unit_tiered",
+            "unit": "sq_ft",
+            "requires_measurement": true,
+            "measurement_label": "Square Footage",
+            "tiers": [
+              { "tier": 1, "name": "Tier 1", "rate": 14.90 },
+              { "tier": 2, "name": "Tier 2", "rate": 17.00 },
+              { "tier": 3, "name": "Tier 3", "rate": 19.00 },
+              { "tier": 4, "name": "Tier 4", "rate": 21.00 }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "spa_attached",
+        "name": "Spa Attached to Pool",
+        "page": 2,
+        "items": [
+          {
+            "id": "spa_attached_plaster",
+            "name": "Spa Attached - Plaster Standard White",
+            "pricing_type": "per_unit",
+            "rate": 25.00,
+            "unit": "sq_ft",
+            "requires_measurement": true,
+            "measurement_label": "Square Footage"
+          },
+          {
+            "id": "spa_attached_stonescapes",
+            "name": "Spa Attached - Stonescapes",
+            "pricing_type": "per_unit_tiered",
+            "unit": "sq_ft",
+            "requires_measurement": true,
+            "measurement_label": "Square Footage",
+            "tiers": [
+              { "tier": 1, "name": "Tier 1", "rate": 29.00 }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "spa_only",
+        "name": "Spa Only",
+        "page": 2,
+        "items": [
+          {
+            "id": "spa_only_plaster",
+            "name": "Spa Only - Plaster Standard White",
+            "pricing_type": "per_unit",
+            "rate": 46.00,
+            "unit": "sq_ft",
+            "requires_measurement": true,
+            "measurement_label": "Square Footage"
+          },
+          {
+            "id": "spa_only_stonescapes",
+            "name": "Spa Only - Stonescapes",
+            "pricing_type": "per_unit_tiered",
+            "unit": "sq_ft",
+            "requires_measurement": true,
+            "measurement_label": "Square Footage",
+            "tiers": [
+              { "tier": 1, "name": "Tier 1", "rate": 52.00 }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "pool_maintenance",
+        "name": "Pool Maintenance & Repairs",
+        "page": 3,
+        "items": [
+          {
+            "id": "drain_pool",
+            "name": "Drain Pool",
+            "pricing_type": "flat",
+            "price": 250.00
+          },
+          {
+            "id": "pebble_drain_cover",
+            "name": "Pebble Drain Cover",
+            "pricing_type": "per_unit",
+            "rate": 105.00,
+            "unit": "each",
+            "requires_measurement": true,
+            "measurement_label": "Quantity"
+          },
+          {
+            "id": "dual_main_drain",
+            "name": "Dual Main Drain",
+            "pricing_type": "flat",
+            "price": 420.00
+          },
+          {
+            "id": "demo_replace_skimmer",
+            "name": "Demo & Replace Skimmer",
+            "pricing_type": "flat",
+            "price": 1150.00
+          },
+          {
+            "id": "rust_spots",
+            "name": "Rust Spots Over 3",
+            "pricing_type": "per_unit_with_minimum",
+            "rate": 200.00,
+            "unit": "each",
+            "minimum_included": 3,
+            "requires_measurement": true,
+            "measurement_label": "Number of Rust Spots",
+            "description": "First 3 rust spots included in base price"
+          },
+          {
+            "id": "crack_pool_repair",
+            "name": "Crack in Pool Repair",
+            "pricing_type": "per_unit",
+            "rate": 250.00,
+            "unit": "linear_ft",
+            "requires_measurement": true,
+            "measurement_label": "Linear Feet",
+            "description": "Crack Disclosure required"
+          },
+          {
+            "id": "crack_spa_repair",
+            "name": "Crack in Spa Repair",
+            "pricing_type": "per_unit",
+            "rate": 250.00,
+            "unit": "linear_ft",
+            "requires_measurement": true,
+            "measurement_label": "Linear Feet",
+            "description": "Crack Disclosure required"
+          }
+        ]
+      },
+      {
+        "id": "shelves",
+        "name": "Baja/Sun Shelves",
+        "page": 3,
+        "items": [
+          {
+            "id": "baja_shelf_shallow",
+            "name": "Baja Shelf/Sun Shelf - Shallow End",
+            "pricing_type": "base_with_overage",
+            "base_price": 5500.00,
+            "base_threshold": 60,
+            "overage_rate": 150.00,
+            "unit": "sq_ft",
+            "requires_measurement": true,
+            "measurement_label": "Square Footage",
+            "description": "Up to 60 sq ft"
+          },
+          {
+            "id": "baja_shelf_deep",
+            "name": "Baja Shelf/Sun Shelf - Deep End",
+            "pricing_type": "base_with_overage",
+            "base_price": 8500.00,
+            "base_threshold": 60,
+            "overage_rate": 250.00,
+            "unit": "sq_ft",
+            "requires_measurement": true,
+            "measurement_label": "Square Footage",
+            "description": "Up to 60 sq ft"
+          }
+        ]
+      },
+      {
+        "id": "coping_tile",
+        "name": "Coping & Tile",
+        "page": 3,
+        "items": [
+          {
+            "id": "remove_replace_coping",
+            "name": "Remove & Replace Coping",
+            "pricing_type": "per_unit_tiered",
+            "unit": "linear_ft",
+            "requires_measurement": true,
+            "measurement_label": "Linear Feet",
+            "tiers": [
+              { "tier": 1, "name": "Tier 1", "rate": 65.00 }
+            ]
+          },
+          {
+            "id": "double_coping",
+            "name": "Double Coping",
+            "pricing_type": "per_unit_tiered",
+            "unit": "linear_ft",
+            "requires_measurement": true,
+            "measurement_label": "Linear Feet",
+            "tiers": [
+              { "tier": 1, "name": "Tier 1", "rate": 130.00 }
+            ]
+          },
+          {
+            "id": "poured_concrete_coping",
+            "name": "Poured in Place Concrete Coping",
+            "pricing_type": "per_unit",
+            "rate": 85.00,
+            "unit": "linear_ft",
+            "requires_measurement": true,
+            "measurement_label": "Linear Feet"
+          },
+          {
+            "id": "remove_replace_tile",
+            "name": "Remove & Replace Tile",
+            "pricing_type": "per_unit_tiered",
+            "unit": "linear_ft",
+            "requires_measurement": true,
+            "measurement_label": "Linear Feet",
+            "tiers": [
+              { "tier": 1, "name": "Tier 1", "rate": 35.00 }
+            ]
+          },
+          {
+            "id": "step_trim_inserts",
+            "name": "Step Trim or Inserts",
+            "pricing_type": "per_unit",
+            "rate": 20.00,
+            "unit": "linear_ft",
+            "requires_measurement": true,
+            "measurement_label": "Linear Feet"
+          },
+          {
+            "id": "stone_veneer",
+            "name": "Stone Veneer",
+            "pricing_type": "per_unit_tiered",
+            "unit": "linear_ft",
+            "requires_measurement": true,
+            "measurement_label": "Linear Feet",
+            "tiers": [
+              { "tier": 1, "name": "Tier 1", "rate": 65.00 }
+            ]
+          },
+          {
+            "id": "ledger_stone",
+            "name": "Ledger Stone",
+            "pricing_type": "per_unit_tiered",
+            "unit": "linear_ft",
+            "requires_measurement": true,
+            "measurement_label": "Linear Feet",
+            "tiers": [
+              { "tier": 1, "name": "Tier 1", "rate": 125.00 }
+            ]
+          },
+          {
+            "id": "clean_tile",
+            "name": "Clean Tile",
+            "pricing_type": "per_unit",
+            "rate": 9.50,
+            "unit": "linear_ft",
+            "requires_measurement": true,
+            "measurement_label": "Linear Feet"
+          },
+          {
+            "id": "remove_replace_mastic",
+            "name": "Remove & Replace Mastic",
+            "pricing_type": "per_unit",
+            "rate": 29.00,
+            "unit": "linear_ft",
+            "requires_measurement": true,
+            "measurement_label": "Linear Feet"
+          }
+        ]
+      },
+      {
+        "id": "specialty_items",
+        "name": "Specialty Items",
+        "page": 4,
+        "items": [
+          {
+            "id": "umbrella_sleeves",
+            "name": "Umbrella Sleeves",
+            "pricing_type": "per_unit",
+            "rate": 120.00,
+            "unit": "each",
+            "requires_measurement": true,
+            "measurement_label": "Quantity"
+          },
+          {
+            "id": "under_cut_tile",
+            "name": "Under Cut Tile - Save Tile",
+            "pricing_type": "base_with_overage",
+            "base_price": 420.00,
+            "base_threshold": 80,
+            "overage_rate": 20.00,
+            "unit": "linear_ft",
+            "requires_measurement": true,
+            "measurement_label": "Perimeter (Linear Feet)",
+            "description": "Base price covers up to 80 linear feet"
+          },
+          {
+            "id": "pressure_test",
+            "name": "Pressure Test",
+            "pricing_type": "flat",
+            "price": 800.00
+          },
+          {
+            "id": "start_up",
+            "name": "Start Up",
+            "pricing_type": "flat",
+            "price": 800.00
+          },
+          {
+            "id": "maintenance_kit",
+            "name": "Maintenance Kit",
+            "pricing_type": "flat",
+            "price": 225.00,
+            "description": "Pole, Leaf Net, Brush, Test Kit"
+          },
+          {
+            "id": "figure_4_handrail",
+            "name": "Install Figure 4 Handrail Up To 60\"",
+            "pricing_type": "flat",
+            "price": 1600.00,
+            "description": "Custom quote required for handrails over 60 inches"
+          },
+          {
+            "id": "modern_handrail",
+            "name": "Install Modern Handrail Up To 60\"",
+            "pricing_type": "flat",
+            "price": 2200.00,
+            "description": "Custom quote required for handrails over 60 inches"
+          }
+        ]
+      },
+      {
+        "id": "concrete_decking",
+        "name": "Concrete & Decking",
+        "page": 4,
+        "items": [
+          {
+            "id": "demo_concrete_deck",
+            "name": "Demo Concrete/Deck",
+            "pricing_type": "per_unit",
+            "rate": 4.25,
+            "unit": "sq_ft",
+            "requires_measurement": true,
+            "measurement_label": "Square Footage"
+          },
+          {
+            "id": "saw_cut_concrete",
+            "name": "Saw Cut Concrete",
+            "pricing_type": "per_unit_with_minimum",
+            "rate": 20.00,
+            "unit": "linear_ft",
+            "minimum_quantity": 40,
+            "requires_measurement": true,
+            "measurement_label": "Linear Feet",
+            "description": "40 foot minimum"
+          },
+          {
+            "id": "dump_load",
+            "name": "Dump Load",
+            "pricing_type": "per_unit",
+            "rate": 1000.00,
+            "unit": "load",
+            "requires_measurement": true,
+            "measurement_label": "Number of Loads",
+            "description": "Trash, Grass, Concrete"
+          },
+          {
+            "id": "broomed_concrete",
+            "name": "Broomed Concrete",
+            "pricing_type": "per_unit_with_minimum",
+            "rate": 16.80,
+            "unit": "sq_ft",
+            "minimum_quantity": 300,
+            "requires_measurement": true,
+            "measurement_label": "Square Footage",
+            "description": "300 sq ft minimum"
+          },
+          {
+            "id": "top_cast",
+            "name": "Top Cast",
+            "pricing_type": "per_unit",
+            "rate": 6.40,
+            "unit": "sq_ft",
+            "requires_measurement": true,
+            "measurement_label": "Square Footage",
+            "description": "Add-on to Broomed Concrete only"
+          }
+        ]
+      },
+      {
+        "id": "pavers",
+        "name": "Pavers",
+        "page": 5,
+        "items": [
+          {
+            "id": "pavers_belgard",
+            "name": "Pavers - Belgard",
+            "pricing_type": "per_unit_tiered",
+            "unit": "sq_ft",
+            "requires_measurement": true,
+            "measurement_label": "Square Footage",
+            "tiers": [
+              { "tier": 1, "name": "Tier 1", "rate": 26.00 }
+            ]
+          },
+          {
+            "id": "pavers_travertine",
+            "name": "Pavers - Travertine",
+            "pricing_type": "per_unit_tiered",
+            "unit": "sq_ft",
+            "requires_measurement": true,
+            "measurement_label": "Square Footage",
+            "tiers": [
+              { "tier": 1, "name": "Tier 1", "rate": 26.00 }
+            ]
+          },
+          {
+            "id": "pavers_artistic",
+            "name": "Pavers - Artistic",
+            "pricing_type": "per_unit_tiered",
+            "unit": "sq_ft",
+            "requires_measurement": true,
+            "measurement_label": "Square Footage",
+            "tiers": [
+              { "tier": 1, "name": "Tier 1", "rate": 28.00 }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "plumbing_returns",
+        "name": "Plumbing & Returns",
+        "page": 5,
+        "items": [
+          {
+            "id": "dedicated_suction_line",
+            "name": "Install Dedicated Suction Line",
+            "pricing_type": "base_with_overage",
+            "base_price": 340.00,
+            "base_threshold": 35,
+            "overage_rate": 7.50,
+            "unit": "linear_ft",
+            "requires_measurement": true,
+            "measurement_label": "Total Linear Feet",
+            "description": "Includes up to 35 feet"
+          },
+          {
+            "id": "additional_surface_return",
+            "name": "Install Additional Surface Return",
+            "pricing_type": "base_with_overage",
+            "base_price": 240.00,
+            "base_threshold": 35,
+            "overage_rate": 7.50,
+            "unit": "linear_ft",
+            "requires_measurement": true,
+            "measurement_label": "Total Linear Feet",
+            "description": "Includes up to 35 feet"
+          }
+        ]
+      },
+      {
+        "id": "lighting",
+        "name": "Lighting",
+        "page": 5,
+        "items": [
+          {
+            "id": "led_2_0_color_light",
+            "name": "2.0 Color LED Light",
+            "pricing_type": "flat",
+            "price": 1800.00,
+            "description": "Installed Into Existing Light Niche"
+          },
+          {
+            "id": "white_light",
+            "name": "White Light",
+            "pricing_type": "flat",
+            "price": 1600.00
+          },
+          {
+            "id": "fill_light_niche",
+            "name": "Fill In Light Niche",
+            "pricing_type": "flat",
+            "price": 250.00
+          },
+          {
+            "id": "color_320_led_light",
+            "name": "Install Color 320 LED Light",
+            "pricing_type": "flat",
+            "price": 1800.00,
+            "description": "Pool or Spa"
+          },
+          {
+            "id": "install_3_0_transformer",
+            "name": "Install 3.0 Transformer",
+            "pricing_type": "flat",
+            "price": 360.00
+          }
+        ]
+      },
+      {
+        "id": "equipment",
+        "name": "Equipment",
+        "page": 5,
+        "items": [
+          {
+            "id": "variable_speed_pump_1_8",
+            "name": "Install 1.8 HP Variable Speed Pump",
+            "pricing_type": "flat",
+            "price": 2650.00
+          },
+          {
+            "id": "variable_speed_pump_2_7",
+            "name": "Install 2.7 HP Variable Speed Pump",
+            "pricing_type": "flat",
+            "price": 2800.00
+          },
+          {
+            "id": "cartridge_filter_600",
+            "name": "Install 600 Series Cartridge Filter",
+            "pricing_type": "flat",
+            "price": 2260.00
+          },
+          {
+            "id": "trac_vac_cleaner",
+            "name": "Install Trac Vac Cleaner",
+            "pricing_type": "flat",
+            "price": 995.00
+          },
+          {
+            "id": "ultra_filter_cyclone",
+            "name": "Install Ultra Filter - Cyclone",
+            "pricing_type": "flat",
+            "price": 995.00
+          },
+          {
+            "id": "smart_guard",
+            "name": "Install Smart Guard",
+            "pricing_type": "flat",
+            "price": 1200.00
+          }
+        ]
+      },
+      {
+        "id": "heating",
+        "name": "Heating",
+        "page": 6,
+        "items": [
+          {
+            "id": "heater_400k_btu",
+            "name": "Install 400K BTU Heater",
+            "pricing_type": "flat",
+            "price": 5238.00
+          },
+          {
+            "id": "gas_line_permit",
+            "name": "Gas Line Permit - Electric Hook Up",
+            "pricing_type": "flat",
+            "price": 450.00,
+            "description": "Optional add-on for heaters"
+          },
+          {
+            "id": "gas_line_run",
+            "name": "Gas Line Run",
+            "pricing_type": "per_unit",
+            "rate": 23.00,
+            "unit": "linear_ft",
+            "requires_measurement": true,
+            "measurement_label": "Linear Feet"
+          },
+          {
+            "id": "heat_chill_pump",
+            "name": "Install Heat/Chill Heat Pump",
+            "pricing_type": "base_with_overage",
+            "base_price": 7995.00,
+            "base_threshold": 35,
+            "overage_rate": 16.80,
+            "unit": "linear_ft",
+            "requires_measurement": true,
+            "measurement_label": "Electric Run (Linear Feet)",
+            "description": "Includes up to 35 feet of electrical"
+          }
+        ]
+      },
+      {
+        "id": "water_automation",
+        "name": "Water & Automation",
+        "page": 6,
+        "items": [
+          {
+            "id": "auto_water_leveler",
+            "name": "Auto Water Leveler",
+            "pricing_type": "flat",
+            "price": 620.00
+          },
+          {
+            "id": "water_line_run",
+            "name": "Water Line Run",
+            "pricing_type": "per_unit",
+            "rate": 6.25,
+            "unit": "linear_ft",
+            "requires_measurement": true,
+            "measurement_label": "Linear Feet"
+          },
+          {
+            "id": "hydra_pure",
+            "name": "Hydra Pure",
+            "pricing_type": "flat",
+            "price": 2495.00
+          },
+          {
+            "id": "salt_system",
+            "name": "Salt System",
+            "pricing_type": "flat",
+            "price": 2125.00
+          },
+          {
+            "id": "omni_pl_pro_4w",
+            "name": "Omni PL Pro 4W",
+            "pricing_type": "base_with_electric",
+            "base_price": 3295.00,
+            "electric_rate": 7.25,
+            "unit": "linear_ft",
+            "requires_measurement": true,
+            "measurement_label": "Electric Run (Linear Feet)",
+            "description": "Base unit price plus electric run cost"
+          },
+          {
+            "id": "omni_salt_ready",
+            "name": "Omni Salt Ready",
+            "pricing_type": "flat",
+            "price": 4225.00
+          },
+          {
+            "id": "omni_with_salt",
+            "name": "Omni With Salt",
+            "pricing_type": "flat",
+            "price": 4675.00
+          }
+        ]
+      },
+      {
+        "id": "custom_bid",
+        "name": "Custom Bid Items",
+        "page": 6,
+        "items": [
+          {
+            "id": "waterfall_repair",
+            "name": "Waterfall/Water Fall Repair",
+            "pricing_type": "custom_bid",
+            "description": "Requires custom pricing - enter bid amount"
+          }
+        ]
+      }
+    ]
+  }

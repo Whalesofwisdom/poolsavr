@@ -28,6 +28,7 @@ import {
   FormMessage,
 } from "./ui/form";
 import { toast } from "sonner";
+import { useMeasurements } from '@/contexts/MeasurementsContext';
 
 // Fix Leaflet default icon issue with Vite
 delete (L.Icon.Default.prototype as any)._getIconUrl;
@@ -107,6 +108,8 @@ const MapContainer = () => {
     },
   });
 
+  const { setMapMeasurements } = useMeasurements();
+
   // Function to calculate measurements from polygon
   const calculateMeasurements = (layer: L.Polygon) => {
     const latlngs = layer.getLatLngs()[0] as L.LatLng[];
@@ -143,6 +146,15 @@ const MapContainer = () => {
 
     setPerimeterM(perimeter);
     setAreaM2(area);
+
+    // NEW: Save to context
+    const perimeterFt = perimeter * 3.28084;
+    const areaFt2 = area * 10.7639;
+    setMapMeasurements({
+      perimeter: perimeterFt,
+      surfaceArea: areaFt2,
+      address: address
+    });
   };
 
   useEffect(() => {
